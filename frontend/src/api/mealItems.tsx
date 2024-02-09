@@ -10,7 +10,7 @@ type mealItemType = {
 
 export const fetchMealItems = (): Promise<mealItemType[]> => {
   const meals = axios
-    .get("http://localhost:3000/meals/mealItems")
+    .get("http://localhost:8010/proxy/meals/mealItems")
     .then((res) => {
       console.log(res.data);
       return res.data;

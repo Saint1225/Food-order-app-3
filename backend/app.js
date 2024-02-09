@@ -7,6 +7,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const mealsRoute = require("./routes/meals");
 
 app.use("/meals", mealsRoute);
+app.get("/", (req, res) => {
+  res.status(200).send("<h1>NodeJS server running...</h1>");
+});
 
 app.listen(3000);
 
