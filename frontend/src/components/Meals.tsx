@@ -1,0 +1,20 @@
+import { useQuery } from "@tanstack/react-query";
+import { fetchMealItems } from "../api/mealItems";
+
+const Meals = () => {
+  const { data: meals } = useQuery({
+    queryKey: ["meals"],
+    queryFn: fetchMealItems,
+  });
+
+  return (
+    <div id="meals">
+      {meals!.map((meal) => (
+        <p>{meal.name}</p>
+        // <MealItems />
+      ))}
+    </div>
+  );
+};
+
+export default Meals;
