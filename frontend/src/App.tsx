@@ -8,7 +8,6 @@ function App() {
   return (
     <body className="bg-amber-700 bg-gradient-to-tr">
       <QueryClientProvider client={query}>
-        <h1>test</h1>
         <Meals />
       </QueryClientProvider>
     </body>
