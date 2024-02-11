@@ -1,12 +1,5 @@
 import axios from "axios";
-
-type mealItemType = {
-  id: string;
-  name: string;
-  price: string;
-  description: string;
-  image: string;
-};
+import { mealItemType } from "../types";
 
 export const fetchMealItems = (): Promise<mealItemType[]> => {
   const meals = axios

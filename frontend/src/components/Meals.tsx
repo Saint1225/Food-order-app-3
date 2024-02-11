@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchMealItems } from "../api/mealItems";
+import MealItems from "./MealItems";
 
 const Meals = () => {
   const { data: meals } = useQuery({
@@ -14,8 +15,8 @@ const Meals = () => {
     >
       {meals
         ? meals.map((meal) => (
-            <p>{meal.name}</p>
-            // <MealItems />
+            // <p>{meal.name}</p>
+            <MealItems meal={meal} />
           ))
         : []}
     </div>
