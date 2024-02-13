@@ -1,14 +1,28 @@
 // import "./App.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Meals from "./components/Meals";
+import EntryPage from "./components/EntryPage";
+import RootLayout from "./routes/RootLayout";
 
 function App() {
   const query = new QueryClient();
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        { index: true, element: <EntryPage /> },
+        { path: "meals", element: <Meals /> },
+      ],
+    },
+  ]);
+
   return (
-    <body className="bg-amber-700 bg-gradient-to-tr">
+    <body className="bg-blueGray-900 bg-gradient-to-tr overflow-auto flex flex-col">
       <QueryClientProvider client={query}>
-        <Meals />
+        <RouterProvider router={router} />
       </QueryClientProvider>
     </body>
   );
