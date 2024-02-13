@@ -11,7 +11,7 @@ const Meals = () => {
   return (
     <div
       id="meals"
-      className="w-1/2 max-w-6xl list-none my-2 mx-auto p-1 grid gap-1"
+      className="w-11/12 max-w-6xl list-none my-2 mx-auto p-1 grid grid-cols-3 gap-10"
     >
       {meals
         ? meals.map((meal) => (
