@@ -20,7 +20,7 @@ function App() {
   ]);
 
   return (
-    <body className="bg-blueGray-900 bg-gradient-to-tr overflow-auto flex flex-col">
+    <body className="bg-blueGray-800 bg-gradient-to-tr overflow-auto flex flex-col">
       <QueryClientProvider client={query}>
         <RouterProvider router={router} />
       </QueryClientProvider>
