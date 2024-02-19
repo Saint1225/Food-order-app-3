@@ -16,7 +16,9 @@ const MainNavigation = () => {
         >
           Menu
         </NavLink>
-        <button className="ml-auto mr-4">Cart</button>
+        <button className="ml-auto mr-8 rounded-xl text-3xl border-solid border-orange-400 border-2 px-4 hover:bg-blueGray-800">
+          Orders
+        </button>
       </div>
       <dialog title="Cart" className="w-96 h-48">
         <form method="dialog">
