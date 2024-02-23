@@ -13,12 +13,7 @@ const Meals = () => {
       id="meals"
       className="w-11/12 max-w-6xl list-none my-2 mx-auto p-1 grid grid-cols-3 gap-10"
     >
-      {meals
-        ? meals.map((meal) => (
-            // <p>{meal.name}</p>
-            <MealItems meal={meal} />
-          ))
-        : []}
+      {meals ? meals.map((meal) => <MealItems meal={meal} />) : []}
     </div>
   );
 };
