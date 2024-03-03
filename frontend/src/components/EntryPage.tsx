@@ -1,21 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { fetchOrder } from "../api/order";
-import { useEffect } from "react";
-import { orderAction } from "../store/orderSlice";
 
 const EntryPage = () => {
-  const dispatch = useDispatch();
-  const { data: orderData } = useQuery({
-    queryKey: ["order"],
-    queryFn: fetchOrder,
-  });
-
-  useEffect(() => {
-    orderData && dispatch(orderAction.replaceOrder({ meals: orderData }));
-  }, [dispatch, orderData]);
-
   const navigate = useNavigate();
 
   const navigateHandling = () => {

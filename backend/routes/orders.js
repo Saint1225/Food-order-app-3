@@ -12,11 +12,8 @@ router.get("/fetchOrder", (req, res) => {
 });
 
 router.post("/submitOrder", (req, res) => {
-  console.log(p);
-  console.log(req.body);
-
-  console.log(typeof JSON.stringify(req.body));
   fs.writeFile(p, JSON.stringify(req.body), (error) => console.log(error));
+  res.status(200).send("Order updated!");
 });
 
 router.use((req, res) => {
