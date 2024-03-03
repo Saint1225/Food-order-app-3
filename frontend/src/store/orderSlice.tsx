@@ -1,16 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-type mealType = {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-};
-
-type orderType = {
-  meals: mealType[];
-  totalAmount: number;
-};
+import { orderType, mealType } from "../types";
 
 const initialOrderState: orderType = {
   meals: [],
@@ -55,6 +44,16 @@ const orderSlice = createSlice({
           }
         });
       }
+    },
+    replaceOrder(state, action) {
+      console.log(action.payload.meals);
+      state.meals = action.payload.meals;
+      state.totalAmount = action.payload.meals.reduce(
+        (acc: number, next: mealType) => {
+          return acc + next.price * next.quantity;
+        },
+        0
+      );
     },
   },
 });

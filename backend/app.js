@@ -3,10 +3,13 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 
 const mealsRoute = require("./routes/meals");
+const orderRoute = require("./routes/orders");
 
 app.use("/meals", mealsRoute);
+app.use("/order", orderRoute);
 app.get("/", (req, res) => {
   res.status(200).send("<h1>NodeJS server running...</h1>");
 });
