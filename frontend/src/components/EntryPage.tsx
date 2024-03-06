@@ -8,7 +8,7 @@ const EntryPage = () => {
   };
 
   return (
-    <div className="w-96 h-screen my-24 mx-auto flex flex-col text-center">
+    <div className="w-96 h-full mt-24 mb-2 mx-auto flex flex-col text-center">
       <h1 className="font-bold w-full text-2xl text-orange-300 mb-12">
         Welcome to Food Ordering App
       </h1>

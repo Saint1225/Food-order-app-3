@@ -10,7 +10,7 @@ const MainNavigation = () => {
   };
 
   return (
-    <div className="h-12 w-full text-yellow-400 bg-blueGray-900 text-center">
+    <div className="h-12 w-full text-yellow-400 bg-blueGray-900 text-center fixed">
       <div className="flex flex-row justify-center gap-36 text-4xl h-full overflow-hidden">
         <img src="../../public/logo.jpg" className="w-14 h-14 mr-auto ml-1" />
         <NavLink
@@ -26,7 +26,7 @@ const MainNavigation = () => {
           Menu
         </NavLink>
         <button
-          className="ml-auto mr-8 rounded-xl text-3xl border-solid border-orange-400 border-2 px-4 hover:bg-blueGray-800"
+          className="ml-auto mr-8 my-1 rounded-xl text-3xl border-solid border-orange-400 border-2 px-4 hover:bg-blueGray-800"
           onClick={cartModalHandler}
         >
           Orders
